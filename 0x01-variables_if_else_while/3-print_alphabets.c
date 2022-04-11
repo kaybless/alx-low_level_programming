@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Return: Always 0 (Succes/correct)
+ * Return: Always 0 (Succes/correct)
  */
 int main (void)
 
@@ -20,7 +20,6 @@ for (upper_case = 'A'; upper_case <= 'Z'; upper_case++)
 {
 putchar(upper_case);
 }
-
 
 
 putchar ('\n');
