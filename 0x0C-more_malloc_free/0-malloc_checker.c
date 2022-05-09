@@ -1,23 +1,18 @@
-#include "main.h"
 #include <stdlib.h>
-
-/*
- * File: 0-malloc_checked.c
- * Auth: Brennan D Baraban
- */
-
+#include <stdio.h>
+#include "main.h"
 /**
- * malloc_checked - Allocates memory using malloc.
- * @b: The number of bytes to be allocated.
- *
- * Return: A pointer to the allocated memory.
+ * malloc_checked - Entry Point
+ * @b: input amount
+ * Return: pointer to new mem
  */
 void *malloc_checked(unsigned int b)
 {
-    void *mem = malloc(b);
+    void *n;
 
-    if (mem == NULL)
+    n = malloc(b);
+
+    if (n == NULL)
         exit(98);
-
-    return (mem);
+    return (n);
 }
