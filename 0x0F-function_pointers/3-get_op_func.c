@@ -1,13 +1,11 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <string.h>
 
 /**
- * get_op_func - ...
- * @s: ...
- *
- * Return: ...
+ * get_op_func - print the name of this function
+ * @s: has the length of the arguments
+ * Return: 0 to indicate a good working of the program
  */
+
 int (*get_op_func(char *s))(int, int)
 {
     op_t ops[] = {
@@ -17,15 +15,16 @@ int (*get_op_func(char *s))(int, int)
         {"/", op_div},
         {"%", op_mod},
         {NULL, NULL}};
-    int i = 0;
+    int i;
+
+    i = 0;
 
     while (i < 5)
     {
         if (strcmp(s, ops[i].op) == 0)
             return (ops[i].f);
-
         i++;
     }
 
-    return (0);
+    return (NULL);
 }

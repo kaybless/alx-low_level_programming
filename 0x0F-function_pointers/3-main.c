@@ -1,17 +1,15 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * main - ...
- * @argc: ...
- * @argv: ...
- *
- * Return: ...
+ * main - print the name of this function
+ * @argc: has the length of the arguments
+ * @argv: has the arguments
+ * Return: 0 to indicate a good working of the program
  */
-int main(int argc, char *argv[])
+
+int main(int argc, char **argv)
 {
-    int (*oprt)(int, int);
+    int (*pf)(int, int);
 
     if (argc != 4)
     {
@@ -19,14 +17,15 @@ int main(int argc, char *argv[])
         exit(98);
     }
 
-    oprt = get_op_func(argv[2]);
+    pf = get_op_func(argv[2]);
 
-    if (!oprt)
+    if (pf == NULL)
     {
         printf("Error\n");
         exit(99);
     }
 
-    printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
+    printf("%d\n", pf(atoi(argv[1]), atoi(argv[3])));
+
     return (0);
 }
