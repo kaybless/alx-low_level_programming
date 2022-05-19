@@ -1,7 +1,9 @@
 #include "variadic_functions.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * print_numbers - fills memory with a constant byte
+ * print_numbers - fills memory 
  * @separator: is string to be printed
  * @n: the amount of args
  * Return: nothing
@@ -21,5 +23,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
             printf("%s", separator);
     }
     va_end(valist);
+    
     printf("\n");
 }
