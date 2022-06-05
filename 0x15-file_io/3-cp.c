@@ -3,9 +3,6 @@
 #include <fcntl.h>
 #include "main.h"
 
-#ifndef BUFF_SIZE
-#define BUFF_SIZE 1024
-#endif
 /**
  * main - program that copies the content of a file to another file
  * @argc: num argument
